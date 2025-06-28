@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import random
 
 def guess_the_number():
@@ -17,6 +18,5 @@ def guess_the_number():
         else:
             print(f"Поздравляю! Вы угадали число за {attempts} попыток.")
             break
-
-if name == "main":
+            
     guess_the_number()
