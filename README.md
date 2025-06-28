@@ -5,8 +5,8 @@
 
 ## Запуск
 ```bash
-python3 guess.py
-
+python3 guess.py 
+```
 ## Участники
 
 - Логутов Данил:  
