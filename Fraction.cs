@@ -91,7 +91,6 @@ namespace lab6
         }
 
 
-        // Для интерфейса 
         /// <summary>
         /// Возвращает десятичное значение дроби.
         /// </summary>
@@ -519,7 +518,6 @@ namespace lab6
             return false;
         }
 
-        // Правило: если два объекта равны по Equals, они обязаны возвращать одинаковый GetHashCode(). Иначе структуры данных будут работать некорректно.
         /// <summary>
         /// Возвращает хеш-код дроби.
         /// </summary>
@@ -530,10 +528,6 @@ namespace lab6
         /// </remarks>
         public override int GetHashCode()
         {
-            // ^ — это оператор XOR (исключающее ИЛИ) для целых чисел
-            // Numerator.GetHashCode() возвращает int (хеш числителя).
-            // Denominator.GetHashCode() возвращает int (хеш знаменателя).
-            // ^ объединяет их в один хеш-код.
             return Numerator.GetHashCode() ^ Denominator.GetHashCode();
         }
 
@@ -550,3 +544,4 @@ namespace lab6
         }
     }
 }
+
