@@ -1,8 +1,5 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace lab6
 {
@@ -57,12 +54,15 @@ namespace lab6
                             CountMeow countingCat1 = new CountMeow(cat4);
                             CountMeow countingCat2 = new CountMeow(cat5);
 
-                            //List<IMeow> list = new List<IMeow> { countingCat1, countingCat2 };
-                            //Cat.CountMeows(list);
+                            for (int i = 0; i < 5; i++)
+                            {
+                                countingCat1.meow();
+                            }
 
-                            List<IMeow> list = new List<IMeow> { countingCat1 };
-                            Cat.CountMeows(list, 5);
-
+                            for (int i = 0; i < 10; i++)
+                            {
+                                countingCat2.meow();
+                            }
 
                             Console.WriteLine();
                             Console.WriteLine("{0} мяукал {1} раз", cat4.Name, countingCat1.meowCount);
@@ -112,12 +112,12 @@ namespace lab6
 
                             Fraction fr = new Fraction(1, 5);
                             CachedFraction cached = new CachedFraction(fr);
-                            Console.WriteLine(cached.GetDoubleValue()); // Вычисляет и кеширует 0.2
-                            Console.WriteLine(cached.GetDoubleValue()); // Берёт из кеша 0.2
+                            Console.WriteLine(cached.GetDoubleValue()); 
+                            Console.WriteLine(cached.GetDoubleValue()); 
 
-                            fr.Numerator = 2; // Меняем дробь
-                            cached.InvalidateCache(); // Сбрасываем кеш
-                            Console.WriteLine(cached.GetDoubleValue()); // Вычисляет заново 0.4
+                            cached.SetNumerator(2);
+
+                            Console.WriteLine(cached.GetDoubleValue()); 
                             break;
                         }
 
