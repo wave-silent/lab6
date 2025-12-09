@@ -12,7 +12,6 @@ namespace lab6
     /// </remarks>
     internal class CountMeow : IMeow
     {
-        // readonly означает, что поле можно присвоить только в конструкторе (или при объявлении), а далее его нельзя изменить.
         private readonly IMeow _wrapped;
         private int _meowCount = 0;
 
@@ -60,3 +59,4 @@ namespace lab6
         }
     }
 }
+
